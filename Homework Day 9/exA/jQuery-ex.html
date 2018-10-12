@@ -1,0 +1,97 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header id='header'>
+            <h1>Contacts</h1>
+        </header>
+        <div id="content">
+            <section class="sections" id="new-contact">
+                <h1>Create New Contact</h1>
+                <form id="form1">
+                    <div id="row-name">
+                        <input type='text' name="name" class="name" placeholder="Name"/>
+                    </div>
+                    <div id="row-phone">
+                        <input type='text' name="phone" class="phone" placeholder="Telephone Number"/>
+                    </div>
+                    <div id="row-email">
+                        <input type='text' name="email" class="email"  placeholder="Email"/>
+                    </div>
+                    <div id="row-submit">
+                        <input type="submit" value="submit"/>
+                    </div>
+                </form>
+            </section>
+            <section class="sections" id="contact-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telephone Number</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row">
+                            <td>Sam</td>
+                            <td>123456789</td>
+                            <td>sam@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Tom</td>
+                            <td>987654321</td>
+                            <td>tom@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Nadim</td>
+                            <td>54678292</td>
+                            <td>nadim@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <footer>
+        </footer>
+        <!-- D Continue on the exercise for the previous two sections. As we know how to use JQuery event
+             right now, we can now implement the validation logic and submission logic for our form.
+
+
+
+The Clear button should remove all the value input to the text box.
+When the input field is invalid, the border of the corresponding input should be changed to red
+Add a Update Contacts list section for the page which has the same validation as the create contact list.
+When I click on the row of the contact list, the values of the contact list should be filled in to the update form.
+Alert the input of name , phone number and email after both forms are submitted and validated. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+            $('tbody').append(`
+                <tr class = "row" id = "row-4">
+                <td>Mary</td> <td>424242424</td><td>mary@gmail.com</td>
+                </tr>`)
+
+            $('div #row-submit').append(
+                `<button id="row-clear">clear</button>`)
+
+            $( "header" ).replaceWith( "<h1>Lok's Contact list</h1>" )
+
+            $("#contact-list table").css( "color", "red" );
+            
+ 
+
+
+        </script>
+    </body>
+</html>
+
+<!-- $('#row-phone input')
+
+//second row of contacts
+$("tbody tr:nth-child(2)")
+
+// all section tags
+$('section')
+
+// by placeholder
+$('input[placeholder=Email]') -->

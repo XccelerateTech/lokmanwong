@@ -1,0 +1,158 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header id='header'>
+            <h1>Contacts</h1>
+        </header>
+        <div id="content">
+            <section class="sections" id="new-contact">
+                <h1>Create New Contact</h1>
+                <form id="form1">
+                    <div id="row-name">
+                        <input type='text' name="name" class="name" placeholder="Name"/>
+                    </div>
+                    <div id="row-phone">
+                        <input type='text' name="phone" class="phone" placeholder="Telephone Number"/>
+                    </div>
+                    <div id="row-email">
+                        <input type='text' name="email" class="email"  placeholder="Email"/>
+                    </div>
+                    <div id="row-submit">
+                        <input type="submit" value="submit"/>
+                    </div>
+                </form>
+            </section>
+            <section class="sections" id="contact-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telephone Number</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row">
+                            <td>Sam</td>
+                            <td>123456789</td>
+                            <td>sam@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Tom</td>
+                            <td>987654321</td>
+                            <td>tom@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Nadim</td>
+                            <td>54678292</td>
+                            <td>nadim@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+                        
+            <section id='update-contact'>
+                <h1>Update Contacts</h1>
+                <form id="update-form" class='contact-form'>
+                    <div id="row-update-name">
+                        <input type='text' name="name" class="nameU" placeholder="Name"/>
+                    </div>
+                    <div id="row-update-phone">
+                        <input type='text' name="phone" class="phoneU" placeholder="Telephone Number"/>
+                    </div>
+                    <div id="row-update-email">
+                        <input type='text' name="email" class="emailU" placeholder="Email"/>
+                    </div>
+                    <div id="row-update-submit">
+                        <input type="submit" value="submit"/>
+                        <input type="reset" value="clear" class="clear"/>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <footer>
+        </footer>
+        <!-- D Continue on the exercise for the previous two sections. As we know how to use JQuery event
+             right now, we can now implement the validation logic and submission logic for our form.
+
+
+
+The Clear button should remove all the value input to the text box.
+When the input field is invalid, the border of the corresponding input should be changed to red
+Add a Update Contacts list section for the page which has the same validation as the create contact list.
+When I click on the row of the contact list, the values of the contact list should be filled in to the update form.
+Alert the input of name , phone number and email after both forms are submitted and validated. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+
+
+            $('.name').on('keydown', function(ee) {   
+            var input = ee.target.value; 
+            if(input.length > 50) {
+                $('.name').css('border','solid 2px red'); 
+            }else{
+                $('.name').css('border','solid 1px black');
+            }
+         });
+            //Validate phone number should be between 6 numbers to 16 numbers
+            $('.phone').on('blur', function(a){
+                var input = a.target.value;
+                if (input = isNaN(input) || input.length < 6 || input.length >16) {
+                    $('.phone').css('border', 'solid 1px red');
+                } else {
+                    $('.phone').css('border', 'solid 1 px black');
+                }
+                }
+                )
+            $('.nameU').on('keydown', function(ee) {   
+                var input = ee.target.value; 
+                if(input.length > 50) {
+                    $('.nameU').css('border','solid 2px red'); 
+                }else{
+                    $('.nameU').css('border','solid 1px black');
+                }
+            });
+                
+            //Validate phone number should be between 6 numbers to 16 numbers
+                $('.phoneU').on('blur', function(a){
+                    var input = a.target.value;
+                    if (input = isNaN(input) || input.length < 6 || input.length >16) {
+                        $('.phoneU').css('border', 'solid 1px red');
+                    } else {
+                        $('.phoneU').css('border', 'solid 1 px black');
+                    }
+                    }
+                );
+            //The Clear button should remove all the value input to the text box.
+                // var input = event.target.value;
+            $('.clear').on('click', function(event) {   
+                $('.clear').input="";
+            }
+         );
+
+            $('#contact-list').on('click', function(ee) {   
+            var input = ee.target.value; 
+            if(input.length > 50) {
+                $('.name').css('border','solid 2px red'); 
+            }else{
+                $('.name').css('border','solid 1px black');
+            }
+         });
+      
+        </script>
+    </body>
+</html>
+
+<!-- $('#row-phone input')
+
+//second row of contacts
+$("tbody tr:nth-child(2)")
+
+// all section tags
+$('section')
+
+// by placeholder
+$('input[placeholder=Email]') -->

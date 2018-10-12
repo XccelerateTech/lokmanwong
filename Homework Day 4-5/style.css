@@ -1,0 +1,212 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.intro {
+
+ 	background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: solid 1px #fff;
+    opacity: 0.3;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+
+.hero-image {
+  background-image: url("header.jpg");
+  background-color: #cccccc;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-20%, -20%);
+  color: white;
+  padding: 20px;
+}
+
+.hero-button {
+  background-color: #f05f40;
+  border-radius: 25px;
+  border: none;
+}
+
+.hero-text h1{
+  font-size: 60px;
+}
+
+
+.redhero {
+  background-color: #f05f40;
+  text-align: center;
+  color: white;
+  padding: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.redhero-button {
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: none;
+}
+
+.redhero p {
+  display: block;
+  padding: 0% 10%;
+}
+
+.whitehero h3 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.icon-p i {
+  font-size: 22px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  margin:0px;
+  padding: 0px;
+}
+
+.icon-subp {
+  font-size: 18px;
+  font-family: "Times New Roman";
+  text-align: center;
+  justify-content: center;
+  color: grey;
+  margin:10px;
+  padding: 5% 20%;
+}
+
+i {
+  font-size: 40px;
+  color: #f05f40;
+}
+
+
+.icons{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.whitehero {
+  padding-top: 5% 10%;
+
+
+}
+
+.container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+  padding:0;
+}
+
+
+
+.image {
+  display:block;
+  max-width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: none;
+
+  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: #f05f40;
+  align-items: center;
+  display: flex;    
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#boxduck:hover .overlay {
+  opacity: 0.6;
+}
+
+#boxtram:hover .overlay {
+  opacity: 0.6;
+}
+
+#boxstation:hover .overlay {
+  opacity: 0.6;
+}
+#boxcat:hover .overlay {
+  opacity: 0.6;
+}
+
+.pictures-invert {
+background-color: black;
+}
+
+.text {
+font-family: 'Cinzel', serif;
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-hero {
+  background-color: #ffffff;
+  text-align: center;
+  color: black;
+  padding: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+}
+
+.contact-icons {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.contact-icons i {
+  color: black;
+}

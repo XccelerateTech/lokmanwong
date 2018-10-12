@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <form action="#destination" method="GET" id="form">
+        <input type='text' name="lat" placeholder="lat" value="22.346578"/>
+        <input type="text" name="lng" placeholder="lng" value="114.135442" />
+
+    </form>
+
+
+    
+    <script type='text/javascript'>
+
+        $(function (){
+ 
+            var serializedInput = $('#form').serialize();
+            //console.log(serializedInput);
+            // serializedInput is a javascript object
+            /*
+                [
+                    {name:"name",value:"John"},
+                    {name:"email",value:"john@example.com"},
+                    {name:"tel",value:12345678}
+                ]
+            */
+            // It worked for both POST and GET request.
+            $.ajax({
+                type:'GET',
+                url:`https://api.sunrise-sunset.org/json?${serializedInput}`,
+                data: serializedInput,
+                dataType: "json",
+                success: function(data){
+                    // Success handler
+                    console.log(data);
+                },
+                error: function(data){
+                    // error handler
+                    console.log("gg"+error);
+                }
+            });
+
+            $.ajax({
+                type:'GET',
+                url:`https://api.sunrise-sunset.org/json?${serializedInput}&date=2018-10-10`,
+                data: serializedInput,
+                dataType: "json",
+                success: function(data){
+                    // Success handler
+                    console.log(data);
+                },
+                error: function(data){
+                    // error handler
+                    console.log("gg"+error);
+                }
+            });
+            
+            //  The time should be in the format HH:MM:SS. (Hints. Call the API with formatted=0 to get the full date string to be parsed)
+        });
+    </script>
+</body>
+
+</html>
